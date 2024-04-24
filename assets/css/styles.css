@@ -499,14 +499,16 @@ a{
     margin: 16px auto auto;
 }
 .blogs .blog-list{
+    overflow: hidden;
     padding: 55px;
     display: flex;
     gap: 30px;
 }
 .blogs .item{
-    width: 33.3%;
+    width: calc(33.33% - 10px);
     border-radius: 16px;
     background: #FFF;
+    flex-shrink: 0;
 }
 .blogs .item:hover{
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
@@ -560,6 +562,28 @@ a{
     font-weight: 600;
     line-height: 1.75;
 }
+.blogs .info .btn{
+    font-size: 1.4rem;
+}
 .blogs .info .btn:hover{
+    background: var(--primary-color);
+}
+
+.blogs .dots{
+    display: flex;
+    gap:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.blogs .dot{
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #5F5B53;
+    cursor: pointer;
+}
+.blogs .dot.active{
+    cursor: default;
     background: var(--primary-color);
 }
